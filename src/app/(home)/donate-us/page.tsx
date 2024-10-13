@@ -11,35 +11,32 @@ const DonatePage = () => {
                 {/* Google Analytics */}
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
                 <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-TQYKHHKY25');
-                    `,
-                }}
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-TQYKHHKY25');
+                        `,
+                    }}
                 />
 
                 {/* SEO */}
-                <title>Donate to theDonki.org | Support AI-Powered Bible Study & Research</title>
-                <meta
-                name="description"
-                content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology. Your donation supports the ongoing maintenance and growth of this free resource, making Scripture accessible to everyone."
-                />
+                <title>Donate to theDonki.org</title>
+                <meta name="description" content="Support theDonki.org and help make biblical knowledge accessible to everyone." />
 
                 {/* Open Graph Meta Tags for Social Media */}
-                <meta property="og:title" content="Donate to theDonki.org | Support AI-Powered Bible Study & Research" />
-                <meta property="og:description" content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
+                <meta property="og:title" content="Donate to theDonki.org" />
+                <meta property="og:description" content="Support theDonki.org and help make biblical knowledge accessible to everyone." />
+                <meta property="og:image" content="https://thedonki.org/images/logo.png" />
                 <meta property="og:url" content="https://thedonki.org/donate" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Donate to theDonki.org | Support AI-Powered Bible Study & Research" />
-                <meta name="twitter:description" content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
+                <meta name="twitter:title" content="Donate to theDonki.org" />
+                <meta name="twitter:description" content="Support theDonki.org and help make biblical knowledge accessible to everyone." />
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
             </Head>
 
             {/* Page content */}

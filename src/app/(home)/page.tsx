@@ -83,35 +83,35 @@ const HomePage = () => {
                 {/* Google Analytics */}
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
                 <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-TQYKHHKY25');
-                    `,
-                }}
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-TQYKHHKY25');
+                        `,
+                    }}
                 />
 
                 {/* SEO */}
-                <title>theDonki.org - AI-Powered Bible Study & Scriptural Research</title>
-                <meta
-                name="description"
-                content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts. Powered by technology to enhance your understanding of God’s Word."
+                <title>theDonki.org - AI-Powered Bible Study & Research</title>
+                <meta 
+                    name="description" 
+                    content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts."
                 />
 
                 {/* Open Graph Meta Tags for Social Media */}
-                <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Scriptural Research" />
+                <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Research" />
                 <meta property="og:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
-                <meta property="og:url" content="https://thedonki.org" />
+                <meta property="og:image" content="https://thedonki.org/images/logo.png" />
+                <meta property="og:url" content="https://thedonki.org/" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Scriptural Research" />
+                <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Research" />
                 <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
             </Head>
 
             {/* Page content */}

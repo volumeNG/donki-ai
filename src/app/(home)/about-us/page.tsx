@@ -10,27 +10,24 @@ const AboutPage = () => {
                 {/* Google Analytics */}
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
                 <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-TQYKHHKY25');
-                    `,
-                }}
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-TQYKHHKY25');
+                        `,
+                    }}
                 />
 
                 {/* SEO */}
                 <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
-                <meta
-                name="description"
-                content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research."
-                />
+                <meta name="description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
 
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
+                <meta property="og:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
                 <meta property="og:url" content="https://thedonki.org/about" />
                 <meta property="og:type" content="website" />
 
@@ -38,7 +35,7 @@ const AboutPage = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
             </Head>
 
             {/* Page content */}
