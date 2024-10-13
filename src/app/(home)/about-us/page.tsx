@@ -7,10 +7,23 @@ const AboutPage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-                <title>About Us - theDonki.org</title>
+                {/* Google Analytics */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
+                <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TQYKHHKY25');
+                    `,
+                }}
+                />
+                {/* SEO */}
+                <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
                 <meta
-                    name="description"
-                    content="Learn about theDonki.org, inspired by the story of Balaam and his donkey in Numbers 22:21-35. Our AI-powered platform enhances Biblical study and understanding."
+                name="description"
+                content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research. Explore Bible passages, original Greek and Hebrew texts, and discover answers to your spiritual questions. Built by Volume Technologies, this platform is dedicated to deepening your faith and understanding of God’s Word through technology."
                 />
             </Head>
 

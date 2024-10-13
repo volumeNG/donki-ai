@@ -36,7 +36,7 @@ const Logo = ({ className, imageSize }: { imageSize?: number; className?: string
 
     return (
         <Link href="/" className={cn("flex items-center text-xl md:text-3xl", className)}>
-            <span className={cn("font-extrabold text-foreground/80")}>theDonki</span>
+            <span className={cn("font-extrabold text-foreground/80")} style={{ color: "#1f75fe" }}>theDonki</span>
             <Image src={logo} alt="Donki Logo" width={imageWidth} height={imageWidth} />
         </Link>
     );

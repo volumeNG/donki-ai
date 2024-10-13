@@ -8,10 +8,23 @@ const DonatePage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
+                {/* Google Analytics */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
+                <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TQYKHHKY25');
+                    `,
+                }}
+                />
+                {/* SEO */}
                 <title>Donate to theDonki.org | Support AI-Powered Bible Study & Research</title>
                 <meta
-                    name="description"
-                    content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology. Your donation supports ongoing growth and accessibility."
+                name="description"
+                content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology. Your donation supports the ongoing maintenance and growth of this free resource, making Scripture accessible to everyone. Donate now via PayStack or email to keep the mission alive!"
                 />
             </Head>
 
