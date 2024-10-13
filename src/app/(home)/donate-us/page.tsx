@@ -41,7 +41,7 @@ const DonatePage = () => {
                     </p>
                 </div>
 
-                <div className="pt-6 text-center">
+                <div className="pt-6">
                     <h2 className="font-semibold text-[32px]">How to Donate</h2>
                     <p className="pt-2 text-[16px] font-medium">
                         You can make a donation via email (please request our donation information) or through PayStack.

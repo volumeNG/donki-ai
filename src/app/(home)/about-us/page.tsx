@@ -42,7 +42,11 @@ const page = () => {
                             theDonki.org
                         </Link>{" "}
                         be a tool that aids your journey of faith, while also encouraging you to seek deeper
-                        understanding through prayer and the guidance of Holy Spirit.
+                        understanding through prayer and the guidance of Holy Spirit. 
+                        <br />Suggestions or inquiries: {" "}
+                        <Link href="mailto:we@thedonki.org" className="text-primary">
+                            we@thedonki.org
+                        </Link>
                     </p>
                 </div>
 
@@ -50,12 +54,6 @@ const page = () => {
                     This platform is supported by voluntary donations.{" "}
                     <Link href={"/donate-us"} className="text-primary">
                         Please support our work.
-                    </Link>
-                    <br />
-                    <br />
-                    Reach out to us via email {" "}
-                    <Link href="mailto:we@thedonki.org" className="text-primary">
-                        we@thedonki.org
                     </Link>
                 </p>
             </div>
