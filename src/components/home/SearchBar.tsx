@@ -61,7 +61,7 @@ const SearchBar = ({ isWriting = false, onSend, handleStop }: TSearchBar) => {
 
     return (
         <>
-            <div className="mb-3 flex w-full justify-center items-center gap-1.5 md:gap-2 max-sm:px-2">
+            <div className="mb-3 px-6  flex w-full justify-center items-center gap-1.5 md:gap-2 max-sm:px-2">
                 <div className="flex w-full items-end justify-start gap-2 rounded-2xl lg:rounded-[26px] border border-border px-3 md:px-5 py-2 md:py-4 bg-secondary">
                     <label htmlFor="file-upload">
                         <Paperclip className="cursor-pointer text-primary max-sm:size-5" />

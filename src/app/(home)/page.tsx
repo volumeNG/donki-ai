@@ -81,7 +81,7 @@ const HomePage = () => {
         };
     }, []);
     return (
-        <div className={`mx-auto   max-sm:px-4 md:max-w-[70%]`} style={{ paddingTop: topPadding + "px" }}>
+        <div className={`mx-auto  max-sm:px-4 md:max-w-[70%]`} style={{ paddingTop: topPadding + "px" }}>
             <div className={`  transition-all duration-700`}>
                 <AnimatePresence>
                     {isSearching ? (
@@ -162,7 +162,7 @@ const HomePage = () => {
                         </motion.div>
                     )}
 
-                    <div className=" mx-auto max-w-4xl 2xl:max-w-6xl w-full">
+                    <div className=" mx-auto max-w-[850px] 2xl:max-w-6xl w-full">
                         <SearchBar
                             onSend={(value, file) => {
                                 handleSearched({ query: value, file }, conversation);
