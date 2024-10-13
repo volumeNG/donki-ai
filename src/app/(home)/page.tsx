@@ -103,15 +103,15 @@ const HomePage = () => {
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Scriptural Research" />
                 <meta property="og:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta property="og:image" content="https://yourdomain.com/images/homepage-share-image.jpg" /> {/* Replace with your image URL */}
-                <meta property="og:url" content="https://yourdomain.com" />
+                <meta property="og:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
+                <meta property="og:url" content="https://thedonki.org" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Scriptural Research" />
                 <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://yourdomain.com/images/homepage-share-image.jpg" /> {/* Replace with your image URL */}
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
             </Head>
 
             {/* Page content */}
