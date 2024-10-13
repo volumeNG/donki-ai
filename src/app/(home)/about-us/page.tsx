@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head"; // Import the Head component
 import Link from "next/link";
+import Script from "next/script";
 
 const AboutPage = () => {
     return (
@@ -8,26 +9,30 @@ const AboutPage = () => {
             {/* Add SEO metadata */}
             <Head>
                 {/* Google Analytics */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                            gtag('config', 'G-TQYKHHKY25');
-                        `,
-                    }}
+                <Script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
                 />
+                <Script id="gtag-init" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-TQYKHHKY25');
+                    `}
+                </Script>
 
                 {/* SEO */}
                 <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
-                <meta name="description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
+                <meta
+                    name="description"
+                    content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research."
+                />
 
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
+                <meta property="og:image" content="https://thedonki.org/images/logo.png" />
                 <meta property="og:url" content="https://thedonki.org/about" />
                 <meta property="og:type" content="website" />
 
@@ -35,7 +40,7 @@ const AboutPage = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
             </Head>
 
             {/* Page content */}

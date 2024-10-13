@@ -13,6 +13,7 @@ import OpenAiAnswerBox from "@/components/home/OpenAiAnswerBox";
 import SearchBar from "@/components/home/SearchBar";
 import UserQueryBox from "@/components/home/UserQueryBox";
 import Logo from "@/components/shared/Logo";
+import Script from "next/script";
 
 const HomePage = () => {
     const { response, handleSearched, isLoading, handleStop } = useSearchTopOpenAi();
@@ -80,19 +81,6 @@ const HomePage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-                {/* Google Analytics */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                            gtag('config', 'G-TQYKHHKY25');
-                        `,
-                    }}
-                />
-
                 {/* SEO */}
                 <title>theDonki.org - AI-Powered Bible Study & Research</title>
                 <meta 
@@ -113,6 +101,20 @@ const HomePage = () => {
                 <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
                 <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
             </Head>
+            {/* Google Analytics */}
+            <Script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TQYKHHKY25');
+                `}
+            </Script>
+
 
             {/* Page content */}
             <div className={`mx-auto  max-sm:px-4 md:max-w-[70%]`} style={{ paddingTop: topPadding + "px" }}>
