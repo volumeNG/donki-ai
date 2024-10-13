@@ -80,25 +80,39 @@ const HomePage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-TQYKHHKY25');
-            `,
-          }}
-        />
-        {/* SEO */}
-        <title>theDonki.org - AI-Powered Bible Study & Scriptural Research</title>
-        <meta
-          name="description"
-          content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts. Powered by technology to enhance your understanding of God’s Word."
-        />
-      </Head>
+                {/* Google Analytics */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"></script>
+                <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TQYKHHKY25');
+                    `,
+                }}
+                />
+
+                {/* SEO */}
+                <title>theDonki.org - AI-Powered Bible Study & Scriptural Research</title>
+                <meta
+                name="description"
+                content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts. Powered by technology to enhance your understanding of God’s Word."
+                />
+
+                {/* Open Graph Meta Tags for Social Media */}
+                <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Scriptural Research" />
+                <meta property="og:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
+                <meta property="og:image" content="https://yourdomain.com/images/homepage-share-image.jpg" /> {/* Replace with your image URL */}
+                <meta property="og:url" content="https://yourdomain.com" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Scriptural Research" />
+                <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
+                <meta name="twitter:image" content="https://yourdomain.com/images/homepage-share-image.jpg" /> {/* Replace with your image URL */}
+            </Head>
 
             {/* Page content */}
             <div className={`mx-auto  max-sm:px-4 md:max-w-[70%]`} style={{ paddingTop: topPadding + "px" }}>

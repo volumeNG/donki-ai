@@ -20,12 +20,26 @@ const DonatePage = () => {
                     `,
                 }}
                 />
+
                 {/* SEO */}
                 <title>Donate to theDonki.org | Support AI-Powered Bible Study & Research</title>
                 <meta
                 name="description"
-                content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology. Your donation supports the ongoing maintenance and growth of this free resource, making Scripture accessible to everyone. Donate now via PayStack or email to keep the mission alive!"
+                content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology. Your donation supports the ongoing maintenance and growth of this free resource, making Scripture accessible to everyone."
                 />
+
+                {/* Open Graph Meta Tags for Social Media */}
+                <meta property="og:title" content="Donate to theDonki.org | Support AI-Powered Bible Study & Research" />
+                <meta property="og:description" content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology." />
+                <meta property="og:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
+                <meta property="og:url" content="https://thedonki.org/donate" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Donate to theDonki.org | Support AI-Powered Bible Study & Research" />
+                <meta name="twitter:description" content="Help sustain theDonki.org, a platform dedicated to spreading biblical knowledge through AI technology." />
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
             </Head>
 
             {/* Page content */}

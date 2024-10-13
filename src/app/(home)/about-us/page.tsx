@@ -19,12 +19,26 @@ const AboutPage = () => {
                     `,
                 }}
                 />
+
                 {/* SEO */}
                 <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
                 <meta
                 name="description"
-                content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research. Explore Bible passages, original Greek and Hebrew texts, and discover answers to your spiritual questions. Built by Volume Technologies, this platform is dedicated to deepening your faith and understanding of God’s Word through technology."
+                content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research."
                 />
+
+                {/* Open Graph Meta Tags for Social Media */}
+                <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
+                <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
+                <meta property="og:image" content="https://yourdomain.com/images/aboutpage-share-image.jpg" /> {/* Replace with your image URL */}
+                <meta property="og:url" content="https://yourdomain.com/about" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
+                <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
+                <meta name="twitter:image" content="https://yourdomain.com/images/aboutpage-share-image.jpg" /> {/* Replace with your image URL */}
             </Head>
 
             {/* Page content */}
