@@ -30,7 +30,7 @@ const AboutPage = () => {
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
+                <meta property="og:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
                 <meta property="og:url" content="https://thedonki.org/about" />
                 <meta property="og:type" content="website" />
 
@@ -38,7 +38,7 @@ const AboutPage = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" /> {/* Replace with your image URL */}
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" /> {/* Replace with your image URL */}
             </Head>
 
             {/* Page content */}
