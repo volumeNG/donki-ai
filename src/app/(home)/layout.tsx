@@ -8,31 +8,6 @@ import Player, { LottieRefCurrentProps } from "lottie-react";
 
 import Navbar from "@/components/shared/Navbar";
 
-export const metadata = {
-    title: "theDonki.org - AI-Powered Bible Study & Research",
-    description: "Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts.",
-    keywords: ["AI Bible study", "scriptural research", "faith", "theDonki.org"],
-    openGraph: {
-        title: "theDonki.org - AI-Powered Bible Study & Research",
-        description: "Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research.",
-        url: "https://thedonki.org/",
-        images: [
-            {
-                url: "https://thedonki.org/images/logo.jpg",
-                alt: "theDonki.org Logo",
-            },
-        ],
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "theDonki.org - AI-Powered Bible Study & Research",
-        description: "Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research.",
-        images: ["https://thedonki.org/images/logo.jpg"],
-    },
-};
-
-
 const HomeLayout = ({
     children,
 }: Readonly<{
