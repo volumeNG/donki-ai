@@ -8,16 +8,14 @@ const AboutPage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-                
-
                 {/* SEO */}
                 <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
-                <meta
-                    name="description"
+                <meta 
+                    name="description" 
                     content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research."
                 />
 
-                {/* Open Graph Meta Tags for Social Media */}
+                {/* Open Graph Meta Tags */}
                 <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
                 <meta property="og:image" content="https://thedonki.org/images/logo.png" />
