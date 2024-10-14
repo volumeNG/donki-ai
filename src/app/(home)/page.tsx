@@ -91,7 +91,7 @@ const HomePage = () => {
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Research" />
                 <meta property="og:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.png" />
+                <meta property="og:image" content="https://thedonki.org/images/logo.jpg" />
                 <meta property="og:url" content="https://thedonki.org/" />
                 <meta property="og:type" content="website" />
 
@@ -99,7 +99,7 @@ const HomePage = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Research" />
                 <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" />
             </Head>
             {/* Google Analytics */}
             <Script

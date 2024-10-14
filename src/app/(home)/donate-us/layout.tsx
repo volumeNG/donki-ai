@@ -14,7 +14,7 @@ export const metadata = {
         url: "https://thedonki.org/donate-us",
         images: [
             {
-                url: "https://thedonki.org/images/logo.png",
+                url: "https://thedonki.org/images/logo.jpg",
                 alt: "theDonki.org Logo",
             },
         ],
@@ -25,7 +25,7 @@ export const metadata = {
         title: "How to Donate to theDonki.org",
         description:
             "Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research.",
-        images: ["https://thedonki.org/images/logo.png"],
+        images: ["https://thedonki.org/images/logo.jpg"],
     },
     alternates: {
         canonical: "https://thedonki.org/donate-us",

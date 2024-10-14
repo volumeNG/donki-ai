@@ -14,7 +14,7 @@ export const metadata = {
         url: "https://thedonki.org/about-us",
         images: [
             {
-                url: "https://thedonki.org/images/logo.png",
+                url: "https://thedonki.org/images/logo.jpg",
                 alt: "theDonki.org Logo",
             },
         ],
@@ -25,7 +25,7 @@ export const metadata = {
         title: "About Us - theDonki.org | AI-Powered Bible Study & Research Platform",
         description:
             "Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research.",
-        images: ["https://thedonki.org/images/logo.png"],
+        images: ["https://thedonki.org/images/logo.jpg"],
     },
 };
 
