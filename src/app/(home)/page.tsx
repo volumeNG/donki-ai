@@ -99,7 +99,7 @@ const HomePage = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Research" />
                 <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
+                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" />
             </Head>
             {/* Google Analytics */}
             <Script
