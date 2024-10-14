@@ -9,14 +9,17 @@ const DonatePage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-                
-
                 {/* SEO */}
                 <title>How to Donate to theDonki.org</title>
                 <meta
                     name="description"
                     content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research."
                 />
+                <meta
+                    name="keywords"
+                    content="donate, Bible study, AI platform, support, theDonki.org, scriptural research"
+                />
+                <link rel="canonical" href="https://thedonki.org/donate-us" />
 
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="How to Donate to theDonki.org" />
@@ -30,20 +33,38 @@ const DonatePage = () => {
                 <meta name="twitter:title" content="How to Donate to theDonki.org" />
                 <meta name="twitter:description" content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research." />
                 <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
+
+                {/* Structured Data */}
+                <script type="application/ld+json">
+                {`
+                {
+                    "@context": "https://schema.org",
+                    "@type": "DonateAction",
+                    "recipient": {
+                        "@type": "Organization",
+                        "name": "theDonki.org"
+                    },
+                    "actionStatus": "https://schema.org/ActiveActionStatus",
+                    "target": "https://www.paypal.com/donate/?business=thedonki%40gmail.com&item_name=Donation&currency_code=USD",
+                    "description": "Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research."
+                }
+                `}
+                </script>
             </Head>
+
             {/* Google Analytics */}
             <Script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-                />
-                <Script id="gtag-init" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-TQYKHHKY25');
-                    `}
-                </Script>
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TQYKHHKY25');
+                `}
+            </Script>
 
             {/* Page content */}
             <div className="pt-16 md:pt-24 max-sm:px-4 max-2xl:px-8">
@@ -76,7 +97,7 @@ const DonatePage = () => {
                     <div className="pt-6">
                         <h2 className="font-semibold text-[32px]">How to Donate</h2>
                         <p className="pt-2 text-[16px] font-medium">
-                            You can make a donation via email (please request our donation information) or through PayStack. Your support enables us to continue this important work!
+                            You can make a donation via email (please request our donation information) or through PayPal. Your support enables us to continue this important work!
                         </p>
                         <div className="flex items-center justify-center gap-5 pt-5">
                             <Button size={"sm"}>
@@ -84,7 +105,7 @@ const DonatePage = () => {
                             </Button>
                             <Button size={"sm"}>
                                 <Link href="https://www.paypal.com/donate/?business=thedonki%40gmail.com&item_name=Donation&currency_code=USD">
-                                    Paystack
+                                    PayPal
                                 </Link>
                             </Button>
                         </div>

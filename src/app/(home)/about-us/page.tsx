@@ -14,6 +14,11 @@ const AboutPage = () => {
                     name="description" 
                     content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research."
                 />
+                <meta 
+                    name="keywords" 
+                    content="about us, theDonki.org, Bible study, AI platform, scriptural research, technology, faith"
+                />
+                <link rel="canonical" href="https://thedonki.org/about-us" />
 
                 {/* Open Graph Meta Tags */}
                 <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
@@ -27,20 +32,35 @@ const AboutPage = () => {
                 <meta name="twitter:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
                 <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
+
+                {/* Structured Data */}
+                <script type="application/ld+json">
+                {`
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "theDonki.org",
+                    "url": "https://thedonki.org",
+                    "logo": "https://thedonki.org/images/logo.png",
+                    "description": "An AI-driven platform inspired by God to assist in Bible study and scriptural research."
+                }
+                `}
+                </script>
             </Head>
+
             {/* Google Analytics */}
             <Script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-                />
-                <Script id="gtag-init" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-TQYKHHKY25');
-                    `}
-                </Script>
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TQYKHHKY25');
+                `}
+            </Script>
 
             {/* Page content */}
             <div className="pt-16 md:pt-20 max-sm:px-4 max-2xl:px-8">
