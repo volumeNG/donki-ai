@@ -9,19 +9,7 @@ const DonatePage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-                {/* Google Analytics */}
-                <Script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-                />
-                <Script id="gtag-init" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-TQYKHHKY25');
-                    `}
-                </Script>
+                
 
                 {/* SEO */}
                 <title>How to Donate to theDonki.org</title>
@@ -43,6 +31,19 @@ const DonatePage = () => {
                 <meta name="twitter:description" content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research." />
                 <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
             </Head>
+            {/* Google Analytics */}
+            <Script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
+                />
+                <Script id="gtag-init" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-TQYKHHKY25');
+                    `}
+                </Script>
 
             {/* Page content */}
             <div className="pt-16 md:pt-24 max-sm:px-4 max-2xl:px-8">

@@ -8,19 +8,7 @@ const AboutPage = () => {
         <>
             {/* Add SEO metadata */}
             <Head>
-                {/* Google Analytics */}
-                <Script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-                />
-                <Script id="gtag-init" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-TQYKHHKY25');
-                    `}
-                </Script>
+                
 
                 {/* SEO */}
                 <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
@@ -42,6 +30,19 @@ const AboutPage = () => {
                 <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
                 <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
             </Head>
+            {/* Google Analytics */}
+            <Script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
+                />
+                <Script id="gtag-init" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-TQYKHHKY25');
+                    `}
+                </Script>
 
             {/* Page content */}
             <div className="pt-16 md:pt-20 max-sm:px-4 max-2xl:px-8">
