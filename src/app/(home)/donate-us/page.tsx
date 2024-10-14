@@ -22,7 +22,7 @@ const DonatePage = () => {
                 <meta property="og:title" content="How to Donate to theDonki.org" />
                 <meta property="og:description" content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research." />
                 <meta property="og:image" content="https://thedonki.org/images/logo.png" />
-                <meta property="og:url" content="https://thedonki.org/donate" />
+                <meta property="og:url" content="https://thedonki.org/donate-us" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}

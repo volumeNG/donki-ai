@@ -19,7 +19,7 @@ const AboutPage = () => {
                 <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
                 <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
                 <meta property="og:image" content="https://thedonki.org/images/logo.png" />
-                <meta property="og:url" content="https://thedonki.org/about" />
+                <meta property="og:url" content="https://thedonki.org/about-us" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
