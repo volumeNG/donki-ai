@@ -19,10 +19,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <Head>
+            {/* <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-                {/* Optionally, add fallback or default meta tags if a page does not specify them */}
-            </Head>
+            </Head> */}
+
             <body className={`${inter.className} antialiased bg-white dark:bg-[#121212]`}>
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
                     <Providers>{children}</Providers>
