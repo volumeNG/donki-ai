@@ -1,41 +1,15 @@
 import React from "react";
 import Head from "next/head"; // Import the Head component
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Script from "next/script";
+
+import { Button } from "@/components/ui/button";
 
 const DonatePage = () => {
     return (
         <>
-            {/* Add SEO metadata */}
-            <Head>
-                {/* SEO */}
-                <title>How to Donate to theDonki.org</title>
-                <meta
-                    name="description"
-                    content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research."
-                />
-                <meta
-                    name="keywords"
-                    content="donate, Bible study, AI platform, support, theDonki.org, scriptural research"
-                />
-                <link rel="canonical" href="https://thedonki.org/donate-us" />
-
-                {/* Open Graph Meta Tags for Social Media */}
-                <meta property="og:title" content="How to Donate to theDonki.org" />
-                <meta property="og:description" content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.png" />
-                <meta property="og:url" content="https://thedonki.org/donate-us" />
-                <meta property="og:type" content="website" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="How to Donate to theDonki.org" />
-                <meta name="twitter:description" content="Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
-
-                {/* Structured Data */}
-                <script type="application/ld+json">
+            {/* Structured Data */}
+            <script type="application/ld+json">
                 {`
                 {
                     "@context": "https://schema.org",
@@ -49,14 +23,9 @@ const DonatePage = () => {
                     "description": "Support theDonki.org to help us maintain our platform dedicated to Bible study and scriptural research."
                 }
                 `}
-                </script>
-            </Head>
-
+            </script>
             {/* Google Analytics */}
-            <Script
-                async
-                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-            />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25" />
             <Script id="gtag-init" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
@@ -77,27 +46,35 @@ const DonatePage = () => {
                     </h1>
                     <div className="donate-p">
                         <p className="text-[16px] font-medium">
-                            Our mission is to make biblical knowledge accessible to everyone, empowering you to explore the Scriptures and deepen your understanding through advanced AI technology.
+                            Our mission is to make biblical knowledge accessible to everyone, empowering you to explore
+                            the Scriptures and deepen your understanding through advanced AI technology.
                         </p>
                         <p className="pt-4 text-[16px] font-medium">
-                            This platform thrives solely through the generosity of individuals who share our vision. Your support is essential for maintaining the website and ensuring it remains available to those seeking to grow in their faith and understanding of God’s Word.
+                            This platform thrives solely through the generosity of individuals who share our vision.
+                            Your support is essential for maintaining the website and ensuring it remains available to
+                            those seeking to grow in their faith and understanding of God’s Word.
                         </p>
                         <p className="pt-4 text-[16px] font-medium">
                             If you find{" "}
                             <Link className="text-primary" href={"/"}>
                                 theDonki.org
                             </Link>{" "}
-                            valuable in your studies or share our vision of spreading knowledge globally, we invite you to consider making a donation. Every contribution, no matter the size, is crucial in keeping this platform operational and expanding its features for all who seek to learn.
+                            valuable in your studies or share our vision of spreading knowledge globally, we invite you
+                            to consider making a donation. Every contribution, no matter the size, is crucial in keeping
+                            this platform operational and expanding its features for all who seek to learn.
                         </p>
                         <p className="pt-4 text-[16px] font-medium">
-                            We trust in God’s provision and are genuinely grateful for your willingness to support this mission. Thank you for being part of our community as we strive to make the Word accessible to everyone, everywhere.
+                            We trust in God’s provision and are genuinely grateful for your willingness to support this
+                            mission. Thank you for being part of our community as we strive to make the Word accessible
+                            to everyone, everywhere.
                         </p>
                     </div>
 
                     <div className="pt-6">
                         <h2 className="font-semibold text-[32px]">How to Donate</h2>
                         <p className="pt-2 text-[16px] font-medium">
-                            You can make a donation via email (please request our donation information) or through PayPal. Your support enables us to continue this important work!
+                            You can make a donation via email (please request our donation information) or through
+                            PayPal. Your support enables us to continue this important work!
                         </p>
                         <div className="flex items-center justify-center gap-5 pt-5">
                             <Button size={"sm"}>

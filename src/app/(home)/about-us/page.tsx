@@ -7,34 +7,9 @@ const AboutPage = () => {
     return (
         <>
             {/* Add SEO metadata */}
-            <Head>
-                {/* SEO */}
-                <title>About Us - theDonki.org | AI-Powered Bible Study & Research Platform</title>
-                <meta 
-                    name="description" 
-                    content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research."
-                />
-                <meta 
-                    name="keywords" 
-                    content="about us, theDonki.org, Bible study, AI platform, scriptural research, technology, faith"
-                />
-                <link rel="canonical" href="https://thedonki.org/about-us" />
 
-                {/* Open Graph Meta Tags */}
-                <meta property="og:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
-                <meta property="og:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.png" />
-                <meta property="og:url" content="https://thedonki.org/about-us" />
-                <meta property="og:type" content="website" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="About Us - theDonki.org | AI-Powered Bible Study & Research Platform" />
-                <meta name="twitter:description" content="Learn about theDonki.org, an AI-driven platform inspired by God to assist in Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.png" />
-
-                {/* Structured Data */}
-                <script type="application/ld+json">
+            {/* Structured Data */}
+            <script type="application/ld+json">
                 {`
                 {
                     "@context": "https://schema.org",
@@ -45,14 +20,10 @@ const AboutPage = () => {
                     "description": "An AI-driven platform inspired by God to assist in Bible study and scriptural research."
                 }
                 `}
-                </script>
-            </Head>
+            </script>
 
             {/* Google Analytics */}
-            <Script
-                async
-                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-            />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25" />
             <Script id="gtag-init" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
@@ -73,18 +44,19 @@ const AboutPage = () => {
                                 theDonki.org
                             </Link>{" "}
                             is dedicated to enhancing your Biblical study and understanding. Just as God used the humble
-                            donkey to reveal His divine message, we believe that technology, inspired by God, can serve as a
-                            tool to deepen our knowledge of His Word.
+                            donkey to reveal His divine message, we believe that technology, inspired by God, can serve
+                            as a tool to deepen our knowledge of His Word.
                         </p>
                         <p className="pt-4 text-[16px] font-medium">
-                            Our AI-powered platform helps you quickly find Bible passages, answer scriptural questions, and
-                            explore the original Greek and Hebrew texts and manuscripts. The goal of{" "}
+                            Our AI-powered platform helps you quickly find Bible passages, answer scriptural questions,
+                            and explore the original Greek and Hebrew texts and manuscripts. The goal of{" "}
                             <Link className="text-primary" href={"/"}>
                                 theDonki.org
                             </Link>{" "}
-                            is to complement—not replace—the Bible and ordained ministers. While technology offers valuable
-                            insights, it is important to seek guidance from ordained ministers of the truth, especially for
-                            deep spiritual questions, as AI may not always provide complete or accurate answers.
+                            is to complement—not replace—the Bible and ordained ministers. While technology offers
+                            valuable insights, it is important to seek guidance from ordained ministers of the truth,
+                            especially for deep spiritual questions, as AI may not always provide complete or accurate
+                            answers.
                         </p>
                         <p className="pt-3 text-[16px] font-medium">
                             Developed by Volume Technologies International in Abuja, Nigeria, under the inspiration of
@@ -93,18 +65,19 @@ const AboutPage = () => {
                                 theDonki.org
                             </Link>{" "}
                             is fully supported by voluntary donations and contributions. These contributions ensure the
-                            continuous maintenance and growth of the site, allowing it to remain a useful resource for your
-                            Bible study.
+                            continuous maintenance and growth of the site, allowing it to remain a useful resource for
+                            your Bible study.
                         </p>
                         <p className="pt-7 text-[16px] font-medium">
-                            As you use this platform, remember that all things, including technology, are inspired by God
-                            Almighty and should be used in ways that glorify Him, the Author of life. Let{" "}
+                            As you use this platform, remember that all things, including technology, are inspired by
+                            God Almighty and should be used in ways that glorify Him, the Author of life. Let{" "}
                             <Link className="text-primary" href={"/"}>
                                 theDonki.org
                             </Link>{" "}
                             be a tool that aids your journey of faith, while also encouraging you to seek deeper
                             understanding through prayer and the guidance of the Holy Spirit.
-                            <br />Suggestions or inquiries:{" "}
+                            <br />
+                            Suggestions or inquiries:{" "}
                             <Link href="mailto:we@thedonki.org" className="text-primary">
                                 we@thedonki.org
                             </Link>
