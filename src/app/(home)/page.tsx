@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Head from "next/head"; // Import the Head component
-
 import { addConversationMessage } from "@/redux/features/openAi/openAiSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { AnimatePresence, motion } from "framer-motion";
@@ -13,7 +11,6 @@ import OpenAiAnswerBox from "@/components/home/OpenAiAnswerBox";
 import SearchBar from "@/components/home/SearchBar";
 import UserQueryBox from "@/components/home/UserQueryBox";
 import Logo from "@/components/shared/Logo";
-import Script from "next/script";
 
 const HomePage = () => {
     const { response, handleSearched, isLoading, handleStop } = useSearchTopOpenAi();
@@ -32,7 +29,7 @@ const HomePage = () => {
             prompt: `How does the Bible encourage believers to use technology for God’s glory?`,
         },
         {
-            prompt: `According to God's teachings, to inherit eternal life and live forever in His presence?`,
+            prompt: `According to God's teachings, how do believers inherit eternal life and live forever in His presence?`,
         },
     ];
 
@@ -79,43 +76,6 @@ const HomePage = () => {
 
     return (
         <>
-            {/* Add SEO metadata */}
-            <Head>
-                {/* SEO */}
-                <title>theDonki.org - AI-Powered Bible Study & Research</title>
-                <meta 
-                    name="description" 
-                    content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts."
-                />
-
-                {/* Open Graph Meta Tags for Social Media */}
-                <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Research" />
-                <meta property="og:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta property="og:image" content="https://thedonki.org/images/logo.jpg" />
-                <meta property="og:url" content="https://thedonki.org/" />
-                <meta property="og:type" content="website" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Research" />
-                <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
-                <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" />
-            </Head>
-            {/* Google Analytics */}
-            <Script
-                async
-                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-TQYKHHKY25');
-                `}
-            </Script>
-
-
             {/* Page content */}
             <div className={`mx-auto  max-sm:px-4 md:max-w-[70%]`} style={{ paddingTop: topPadding + "px" }}>
                 <div className={`transition-all duration-700`}>
