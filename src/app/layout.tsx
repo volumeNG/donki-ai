@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 import Providers from "@/components/shared/providers";
-import Head from "next/head";
 
 import "./globals.css";
 
@@ -11,7 +11,31 @@ const inter = Inter({
     subsets: ["latin"],
     weight: ["400", "600", "700"],
 });
-
+export const metadata = {
+    title: "theDonki.org - AI-Powered Bible Study & Research",
+    description:
+        "Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts.",
+    openGraph: {
+        title: "theDonki.org - AI-Powered Bible Study & Research",
+        description:
+            "Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research.",
+        url: "https://thedonki.org/",
+        images: [
+            {
+                url: "https://thedonki.org/images/logo.jpg",
+                alt: "theDonki.org Logo",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "theDonki.org - AI-Powered Bible Study & Research",
+        description:
+            "Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research.",
+        images: ["https://thedonki.org/images/logo.jpg"],
+    },
+};
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -19,10 +43,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            {/* <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-            </Head> */}
-
             <body className={`${inter.className} antialiased bg-white dark:bg-[#121212]`}>
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
                     <Providers>{children}</Providers>
