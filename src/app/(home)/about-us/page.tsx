@@ -16,7 +16,7 @@ const AboutPage = () => {
                     "@type": "Organization",
                     "name": "theDonki.org",
                     "url": "https://thedonki.org",
-                    "logo": "https://thedonki.org/images/logo.png",
+                    "logo": "https://thedonki.org/images/logo.jpg",
                     "description": "An AI-driven platform inspired by God to assist in Bible study and scriptural research."
                 }
                 `}
