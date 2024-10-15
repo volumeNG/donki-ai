@@ -82,7 +82,7 @@ const DonatePage = () => {
                             </Button>
                             <Button size={"sm"}>
                                 <Link href="#">
-                                    PayPal
+                                    Paystack
                                 </Link>
                             </Button>
                         </div>
