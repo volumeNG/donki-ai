@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head"; // Import the Head component
 
+import Script from "next/script";
+
 import { addConversationMessage } from "@/redux/features/openAi/openAiSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { AnimatePresence, motion } from "framer-motion";
@@ -13,7 +15,6 @@ import OpenAiAnswerBox from "@/components/home/OpenAiAnswerBox";
 import SearchBar from "@/components/home/SearchBar";
 import UserQueryBox from "@/components/home/UserQueryBox";
 import Logo from "@/components/shared/Logo";
-import Script from "next/script";
 
 const HomePage = () => {
     const { response, handleSearched, isLoading, handleStop } = useSearchTopOpenAi();
@@ -29,10 +30,10 @@ const HomePage = () => {
             prompt: `Can you show me the original Hebrew or Greek text of a specific Bible verse?`,
         },
         {
-            prompt: `How does the Bible encourage believers to use technology for God’s glory?`,
+            prompt: `How can believers use technology for God’s glory according to the Bible?`,
         },
         {
-            prompt: `According to God's teachings, to inherit eternal life and live forever in His presence?`,
+            prompt: `According to the Bible teachings, what must one do to inherit eternal life and live forever in His presence?`,
         },
     ];
 
@@ -83,14 +84,17 @@ const HomePage = () => {
             <Head>
                 {/* SEO */}
                 <title>theDonki.org - AI-Powered Bible Study & Research</title>
-                <meta 
-                    name="description" 
+                <meta
+                    name="description"
                     content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research. Search Bible passages, get answers, and explore Greek and Hebrew texts."
                 />
 
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="theDonki.org - AI-Powered Bible Study & Research" />
-                <meta property="og:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
+                <meta
+                    property="og:description"
+                    content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research."
+                />
                 <meta property="og:image" content="https://thedonki.org/images/logo.jpg" />
                 <meta property="og:url" content="https://thedonki.org/" />
                 <meta property="og:type" content="website" />
@@ -98,14 +102,14 @@ const HomePage = () => {
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="theDonki.org - AI-Powered Bible Study & Research" />
-                <meta name="twitter:description" content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research." />
+                <meta
+                    name="twitter:description"
+                    content="Experience theDonki.org, the revolutionary AI-powered platform for Bible study and scriptural research."
+                />
                 <meta name="twitter:image" content="https://thedonki.org/images/logo.jpg" />
             </Head>
             {/* Google Analytics */}
-            <Script
-                async
-                src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25"
-            />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TQYKHHKY25" />
             <Script id="gtag-init" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
@@ -114,7 +118,6 @@ const HomePage = () => {
                     gtag('config', 'G-TQYKHHKY25');
                 `}
             </Script>
-
 
             {/* Page content */}
             <div className={`mx-auto  max-sm:px-4 md:max-w-[70%]`} style={{ paddingTop: topPadding + "px" }}>
@@ -224,7 +227,9 @@ const HomePage = () => {
                                                 className="cursor-pointer rounded-2xl border min-w-[200px] border-border p-3 md:p-5 hover:bg-background"
                                                 onClick={() => {
                                                     handleSearched({ query: prompt.prompt }, conversation);
-                                                    dispatch(addConversationMessage({ content: prompt.prompt, role: "user" }));
+                                                    dispatch(
+                                                        addConversationMessage({ content: prompt.prompt, role: "user" })
+                                                    );
                                                 }}
                                             >
                                                 <h1 className="text-sm text-foreground/80 ">“{prompt.prompt}”</h1>
