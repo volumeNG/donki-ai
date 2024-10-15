@@ -101,10 +101,10 @@ const SearchBar = ({ isWriting = false, onSend, handleStop }: TSearchBar) => {
                         <textarea
                             value={input}
                             onChange={handleInputChange}
-                            onKeyDown={handleKeyDown}
-                            placeholder="Message TheDonki"
+                            // onKeyDown={handleKeyDown}
+                            placeholder="Message theDonki"
                             rows={1}
-                            className="w-full  max-sm:text-sm outline-none bg-transparent resize-none max-h-60 overflow-y-auto"
+                            className="w-full  max-sm:text-sm outline-none bg-transparent resize-none max-h-60 overflow-y-auto placeholder:text-sm md:placeholder:text-md"
                         />
                     </div>
                 </div>

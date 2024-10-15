@@ -37,7 +37,7 @@ const UserQueryBox = ({ message, index, handleSearched, isLoading }: Props) => {
         },
     ];
     return (
-        <div>
+        <div className="mt-5">
             {/* User's question */}
             {
                 isEnableEdit && !isLoading ? (
@@ -54,8 +54,8 @@ const UserQueryBox = ({ message, index, handleSearched, isLoading }: Props) => {
                             />
                             <div className="flex justify-end items-center  ">
                                 <button
+                                    className="bg-secondary dark:text-gray-200 text-black/60 px-2 md:px-3  py-1 md:py-2 rounded-full  font-bold cursor-pointer text-xs md:text-md "
                                     onClick={() => setIsEnableEdit(false)}
-                                    className="bg-secondary text-black/60 px-3 py-2 rounded-full  font-bold cursor-pointer"
                                 >
                                     Cancel
                                 </button>
@@ -69,7 +69,7 @@ const UserQueryBox = ({ message, index, handleSearched, isLoading }: Props) => {
                                             setIsEnableEdit(false);
                                         }
                                     }}
-                                    className="bg-primary ml-2 px-3 py-2 rounded-full text-white font-bold cursor-pointer "
+                                    className="bg-primary ml-2 px-2 md:px-3  py-1 md:py-2  text-xs md:text-md rounded-full text-white font-bold cursor-pointer "
                                 >
                                     Send
                                 </button>

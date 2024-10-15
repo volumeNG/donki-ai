@@ -5,12 +5,23 @@ import Providers from "@/components/shared/providers";
 
 import "./globals.css";
 
+import type { Viewport } from "next";
+
 import { ThemeProvider } from "@/components/shared/theme-provider";
 
 const inter = Inter({
     subsets: ["latin"],
     weight: ["400", "600", "700"],
 });
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    // Also supported by less commonly used
+    // interactiveWidget: 'resizes-visual',
+};
 export const metadata = {
     title: "theDonki.org - AI-Powered Bible Study & Research",
     description:
