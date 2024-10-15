@@ -15,6 +15,7 @@ const SearchBar = ({ isWriting = false, onSend, handleStop }: TSearchBar) => {
     const [input, setInput] = useState("");
     const [selectedFile, setSelectedFile] = useState<File | null>(null); // State for storing the selected file
     const fileInputRef = useRef<HTMLInputElement | null>(null); // Ref for the file input
+    const textareaRef = useRef<HTMLTextAreaElement | null>(null); // Ref for the textarea
 
     const handleInputChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
         const input = e.target as HTMLTextAreaElement;
@@ -55,6 +56,9 @@ const SearchBar = ({ isWriting = false, onSend, handleStop }: TSearchBar) => {
             setSelectedFile(null); // Reset the file after sending
             if (fileInputRef.current) {
                 fileInputRef.current.value = ""; // Clear the file input field
+            }
+            if (textareaRef.current) {
+                textareaRef.current.style.height = "auto"; // Reset textarea height
             }
         }
     };
@@ -102,6 +106,7 @@ const SearchBar = ({ isWriting = false, onSend, handleStop }: TSearchBar) => {
                             value={input}
                             onChange={handleInputChange}
                             // onKeyDown={handleKeyDown}
+                            ref={textareaRef}
                             placeholder="Message theDonki"
                             rows={1}
                             className="w-full  max-sm:text-sm outline-none bg-transparent resize-none max-h-60 overflow-y-auto placeholder:text-sm md:placeholder:text-md"
