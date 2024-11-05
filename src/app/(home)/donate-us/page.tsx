@@ -81,8 +81,8 @@ const DonatePage = () => {
                                 <Link href="mailto:we@thedonki.org">Send Email</Link>
                             </Button>
                             <Button size={"sm"}>
-                                <Link href="https://www.paypal.com/donate/?business=thedonki%40gmail.com&item_name=Donation&currency_code=USD">
-                                    PayPal
+                                <Link href="#">
+                                    Paystack
                                 </Link>
                             </Button>
                         </div>
