@@ -33,9 +33,8 @@ const AppDropdown = ({ dropdownItems, className }: TDropdownMenu) => {
                 className={cn("w-44 rounded-xl", className)}
             >
                 {dropdownItems.map((prompt, i) => (
-                    <>
+                    <React.Fragment key={prompt.label}>
                         <DropdownMenuItem
-                            key={prompt.label}
                             className="flex cursor-pointer rounded-md items-center justify-between gap-4 px-4 py-2"
                             onClick={prompt.onClick}
                         >
@@ -43,7 +42,7 @@ const AppDropdown = ({ dropdownItems, className }: TDropdownMenu) => {
                             {prompt.icon}
                         </DropdownMenuItem>
                         {dropdownItems.length - 1 !== i && <DropdownMenuSeparator />}
-                    </>
+                    </React.Fragment>
                 ))}
             </DropdownMenuContent>
         </DropdownMenu>

@@ -14,9 +14,13 @@ const useAppCaptcha = () => {
         }
 
         setLoading(true);
+        setToken(null); // Clear any previous token
+
         try {
-            const token = await executeRecaptcha("yourAction");
-            setToken(token); // Set the token
+            const newToken = await executeRecaptcha("yourAction");
+
+            setToken(newToken); // Set the new token
+            return newToken;
         } catch (error) {
             console.error("ReCaptcha verification failed", error);
         } finally {
@@ -24,9 +28,12 @@ const useAppCaptcha = () => {
         }
     }, [executeRecaptcha]);
 
+    // Optional: automatically re-run when executeRecaptcha becomes available
     useEffect(() => {
-        handleReCaptchaVerify(); // Optionally trigger on component mount
-    }, [handleReCaptchaVerify]);
+        if (executeRecaptcha) {
+            handleReCaptchaVerify();
+        }
+    }, [executeRecaptcha, handleReCaptchaVerify]);
 
     return { token, loading, handleReCaptchaVerify };
 };

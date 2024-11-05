@@ -8,8 +8,8 @@ const authApi = baseApi.injectEndpoints({
             query: (userInfo) => ({
                 url: "/auth/signin",
                 method: METHOD.POST,
-                body: { email: userInfo.email, password: userInfo.password },
-                headers: { authorization: userInfo.token },
+                body: { email: userInfo.email, password: userInfo.password, token: userInfo.token },
+                // headers: { authorization: userInfo.token },
             }),
         }),
         getCaptchaValidation: builder.query({

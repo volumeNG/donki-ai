@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useIncreaseUntruthfulMutation } from "@/redux/features/dashboard/dashboardApi";
 import { addConversationMessage, deleteConversationMessages, IConversation } from "@/redux/features/openAi/openAiSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
-import { Copy, RefreshCcw, ThumbsDown, Volume2 } from "lucide-react";
+import { Copy, LoaderCircle, PauseCircle, RefreshCcw, ThumbsDown, Volume2 } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { toast } from "sonner";
@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import copyToClipboard from "@/lib/handleCopy";
 import readAloud from "@/lib/readText";
 import scrollBottom from "@/lib/scrollBottom";
+import useAppCaptcha from "@/hooks/useAppCaptcha";
 
 import { AppDropdown } from "../ui/AppDropdown";
 import { DonkiLogo } from "../ui/donki-logo";
@@ -26,8 +27,12 @@ type Props = {
 const OpenAiAnswerBox = ({ message, isLoading, index, handleSearched, isError }: Props) => {
     const [increaseUntruthful] = useIncreaseUntruthfulMutation();
     const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState(false);
+    const [isAudioLoading, setIsAudioLoading] = useState(false);
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
     const dispatch = useAppDispatch();
+    const { handleReCaptchaVerify } = useAppCaptcha();
     const conversation = useAppSelector((state) => state.openAi.conversation);
+
     const handleSendUntruthful = async () => {
         if (!isFeedbackSubmitted) {
             await increaseUntruthful("")
@@ -37,11 +42,15 @@ const OpenAiAnswerBox = ({ message, isLoading, index, handleSearched, isError }:
                     setIsFeedbackSubmitted(true);
                 })
                 .catch((res) => {
-                    toast.error(res?.data?.message || "something went wrong");
+                    toast.error(res?.data?.message || "Something went wrong");
                 });
         } else {
             toast.warning("You have already submitted your feedback. Thank you!");
         }
+    };
+
+    const handlePlayPauseAudio = () => {
+        readAloud(message, setIsAudioLoading, setIsAudioPlaying, handleReCaptchaVerify);
     };
 
     const repliedDropdownItems = [
@@ -68,13 +77,20 @@ const OpenAiAnswerBox = ({ message, isLoading, index, handleSearched, isError }:
             onClick: handleSendUntruthful,
         },
         {
-            label: "Proclaim",
-            icon: <Volume2 size={20} />,
-            onClick: () => {
-                readAloud(message);
-            },
+            label: isAudioPlaying ? "Pause" : "Proclaim",
+            icon: isAudioLoading ? (
+                <div className="amint animate-spin">
+                    <LoaderCircle size={20} />
+                </div>
+            ) : isAudioPlaying ? (
+                <PauseCircle size={20} />
+            ) : (
+                <Volume2 size={20} />
+            ),
+            onClick: isAudioLoading ? () => {} : handlePlayPauseAudio,
         },
     ];
+
     useEffect(() => {
         scrollBottom();
     }, [message]);
@@ -84,7 +100,7 @@ const OpenAiAnswerBox = ({ message, isLoading, index, handleSearched, isError }:
             <div className={isLoading ? "animate-pulse" : ""}>
                 <DonkiLogo />
             </div>
-            <div className={`${isError ? "text-red-600" : "text-foreground/80"} space-y-2   `}>
+            <div className={`${isError ? "text-red-600" : "text-foreground/80"} space-y-2`}>
                 <Markdown
                     components={{
                         h1: ({ node, ...props }) => (
@@ -96,7 +112,7 @@ const OpenAiAnswerBox = ({ message, isLoading, index, handleSearched, isError }:
                             <p className="text-sm lg:text-base font-medium leading-relaxed mb-4" {...props} />
                         ),
                         ul: ({ node, ...props }) => <ul className="list-disc ml-3 lg:ml-5 mb-4" {...props} />,
-                        ol: ({ node, ...props }) => <ol className="list-decimal   ml-3 lg:ml-5 mb-4" {...props} />,
+                        ol: ({ node, ...props }) => <ol className="list-decimal ml-3 lg:ml-5 mb-4" {...props} />,
                         li: ({ node, ...props }) => <li className="mb-2" {...props} />,
                         strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
                         em: ({ node, ...props }) => <em className="italic" {...props} />,

@@ -23,7 +23,7 @@ export const formSchema = z.object({
 });
 
 const SignInForm = () => {
-    const { handleReCaptchaVerify, token } = useAppCaptcha();
+    const { handleReCaptchaVerify } = useAppCaptcha();
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -43,7 +43,8 @@ const SignInForm = () => {
         //     console.log("Execute recaptcha not yet available");
         //     return;
         // }
-        await handleReCaptchaVerify();
+        const token = await handleReCaptchaVerify();
+        console.log({ token }, "dfdfdfd");
         await loginUser({ ...values, token: token })
             .unwrap()
             .then((res) => {

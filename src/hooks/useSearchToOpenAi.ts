@@ -14,7 +14,7 @@ const useSearchTopOpenAi = () => {
     const [conversation, setConversation] = useState<{ role: string; content: string }[]>([]);
     const [response, setResponse] = useState<string>("");
     const dispatch = useAppDispatch();
-    const { loading, token, handleReCaptchaVerify } = useAppCaptcha();
+    const { handleReCaptchaVerify } = useAppCaptcha();
 
     // Ref to track if the stream should stop
     const isStoppedRef = useRef(false);
@@ -38,7 +38,7 @@ const useSearchTopOpenAi = () => {
         try {
             dispatch(setIsError(false));
 
-            // await handleReCaptchaVerify();
+            const token = await handleReCaptchaVerify();
             // Create FormData to handle both text and file data
             const formData = new FormData();
             formData.append(
@@ -59,6 +59,9 @@ const useSearchTopOpenAi = () => {
             const responseStream = await fetch(`${config.baseApi}/ai-config/asked`, {
                 method: "POST",
                 body: formData, // Send the FormData object (no need to set Content-Type, browser does it automatically)
+                headers: {
+                    authorization: token as string,
+                },
             });
             if (!responseStream.ok) {
                 const errorText = await responseStream.text(); // Read the error message from the body
