@@ -109,6 +109,7 @@ const SearchBar = ({ isWriting = false, onSend, handleStop }: TSearchBar) => {
                             ref={textareaRef}
                             placeholder="Message theDonki"
                             rows={1}
+                            maxLength={300}
                             className="w-full  max-sm:text-sm outline-none bg-transparent resize-none max-h-60 overflow-y-auto placeholder:text-sm md:placeholder:text-md"
                         />
                     </div>

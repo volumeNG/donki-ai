@@ -4,6 +4,7 @@ import { config } from "@/config";
 import { addConversationMessage, IConversation, setIsError } from "@/redux/features/openAi/openAiSlice";
 import { useAppDispatch } from "@/redux/hook";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { toast } from "sonner";
 
 import scrollBottom from "@/lib/scrollBottom";
 
@@ -30,6 +31,7 @@ const useSearchTopOpenAi = () => {
         preConversions?: IConversation[]
     ) => {
         const { query, file } = userQueryObj; // Destructure the userQueryObj
+
         setIsLoading(true);
         isStoppedRef.current = false; // Reset the stop flag before starting a new query
         setResponse("");

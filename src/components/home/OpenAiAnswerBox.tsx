@@ -104,9 +104,9 @@ const OpenAiAnswerBox = ({ message, isLoading, index, handleSearched, isError }:
                 <Markdown
                     components={{
                         h1: ({ node, ...props }) => (
-                            <h1 className="text-[32px] leading-[38px] font-semibold mb-4" {...props} />
+                            <h1 className="text-[32px] leading-[38px] font-medium mb-4" {...props} />
                         ),
-                        h2: ({ node, ...props }) => <h2 className="text-2xl font-semibold mb-3" {...props} />,
+                        h2: ({ node, ...props }) => <h2 className="text-2xl font-medium mb-3" {...props} />,
                         h3: ({ node, ...props }) => <h3 className="text-xl font-medium mb-2" {...props} />,
                         p: ({ node, ...props }) => (
                             <p className="text-sm lg:text-base font-medium leading-relaxed mb-4" {...props} />
